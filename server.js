@@ -28,7 +28,7 @@ function createinject(data){
         ${title}
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+    <link href="/ui/style.css" rel="stylesheet" />
     </head>
 <body>
     <div>
@@ -55,11 +55,11 @@ var app = express();
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
-  res.send(createinject(aman1));
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/aman1', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'aman1.html'));
+  res.send(createinject(aman1));
 });
 
 app.get('/aman2', function (req, res) {
