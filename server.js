@@ -2,7 +2,8 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
-var aman1 ={
+var file= { 
+   aman1: {
     title: 'yoaman',
     heading: 'mr j',
     date: '27 sept 2016',
@@ -15,7 +16,32 @@ var aman1 ={
             <p>
                 is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true
             </p>`
-};
+},
+  aman2: {
+      title: 'yoamanyo',
+    heading: 'mr joker',
+    date: '28 sept 2016',
+    content: `<p>
+                is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true
+            </p>
+            <p>
+                is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true
+            </p>
+            `},
+  amannair:{
+      title: 'amannair',
+    heading: 'mr j',
+    date: '29 sept 2016',
+    content: `<p>
+    hi dis is aman hi dis is aman hi dis is aman  hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman
+    </p>
+    <p>
+    hi dis is aman hi dis is aman hi dis is aman  hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman
+    </p><p>
+    hi dis is aman hi dis is aman hi dis is aman  hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman
+    </p>`
+         }
+  };
 function createinject(data){
     var title=data.title;
     var date=data.date;
@@ -31,6 +57,7 @@ function createinject(data){
     <link href="/ui/style.css" rel="stylesheet" />
     </head>
 <body>
+ <div class="container">
     <div>
         <a href="/aman2">yoamanyo</a>
         </div>
@@ -46,6 +73,7 @@ function createinject(data){
             ${content}
             </div>
         <a href="/">Home</a>
+        </div>
     </body>        
         </html>`;
         return htmlinject;
@@ -58,8 +86,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/aman1', function (req, res) {
-  res.send(createinject(aman1));
+app.get('/:amanname', function (req, res) {
+  res.send(createinject(file[amanname]));
 });
 
 app.get('/aman2', function (req, res) {
