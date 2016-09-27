@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 
 var file= { 
-   'aman1': {
+   'amanone': {
     title: 'yoaman',
     heading: 'mr j',
     date: '27 sept 2016',
@@ -17,7 +17,7 @@ var file= {
                 is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true
             </p>`
 },
-  'aman2': {
+  'amantwo': {
       title: 'yoamanyo',
     heading: 'mr joker',
     date: '28 sept 2016',
@@ -29,8 +29,8 @@ var file= {
             </p>
             `},
   'amannair':{
-      title: 'amannair',
-    heading: 'mr j',
+      title: 'reamannair',
+    heading: 'mr joker aman',
     date: '29 sept 2016',
     content: `<p>
     hi dis is aman hi dis is aman hi dis is aman  hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman hi dis is aman
