@@ -87,15 +87,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:amanname', function (req, res) {
+    var amanname = res.params.amanname;
   res.send(createinject(file[amanname]));
-});
-
-app.get('/aman2', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'aman2.html'));
-});
-
-app.get('/amannair', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'amannair.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
