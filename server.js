@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 
 var file= { 
-   aman1: {
+   'aman1': {
     title: 'yoaman',
     heading: 'mr j',
     date: '27 sept 2016',
@@ -17,7 +17,7 @@ var file= {
                 is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true
             </p>`
 },
-  aman2: {
+  'aman2': {
       title: 'yoamanyo',
     heading: 'mr joker',
     date: '28 sept 2016',
@@ -28,7 +28,7 @@ var file= {
                 is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true is it true
             </p>
             `},
-  amannair:{
+  'amannair':{
       title: 'amannair',
     heading: 'mr j',
     date: '29 sept 2016',
